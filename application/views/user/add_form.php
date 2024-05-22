@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Full Name <code>*</code></label>
-                <input name="fullName" type="text" class="form-control" id="" placeholder="Full Name" required>
+                <input name="full_name" type="text" class="form-control" id="" placeholder="Full Name" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Phone <code>*</code></label>
@@ -36,8 +36,8 @@
                 <input name="password" type="password" class="form-control" id="" placeholder="Password" required>
             </div>
             <div class="mb-3">
-                <label for="Role" class="form-label">Role <code>*</code></label>
-                <input class="form-control" list="datalistOptions" id="role" placeholder="Tekan Untuk Memilih Role..." required>
+                <label for="" class="form-label">Role <code>*</code></label>
+                <input name="role" class="form-control" list="datalistOptions" id="role" placeholder="Tekan Untuk Memilih Role..." required>
                 <datalist id="datalistOptions">
                     <option value="Pemilik">
                     <option value="Admin">

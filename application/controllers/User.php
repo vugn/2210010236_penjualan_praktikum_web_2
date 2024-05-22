@@ -31,8 +31,10 @@ class User extends CI_Controller
         $this->load->view('menu/main', $data);
     }
 
-    public function save(){
-        $this->db->affected_rows()>0{
+    public function save()
+    {
+        $this->User_Model->Save();
+        if ($this->db->affected_rows() > 0) {
             $this->session->set_flashdata("Success", "Data Berhasil Disimpan");
         }
         redirect("user");
