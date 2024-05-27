@@ -35,8 +35,18 @@ class User extends CI_Controller
     {
         $this->User_Model->Save();
         if ($this->db->affected_rows() > 0) {
-            $this->session->set_flashdata("Success", "Data Berhasil Disimpan");
+            $this->session->set_flashdata('Success', 'Data Berhasil Disimpan');
         }
-        redirect("user");
+        redirect('user');
+    }
+
+    public function getEdit($id)
+    {
+        $data = array(
+            'title' => 'Update Data User',
+            'user' => $this->User_Model->getById($id),
+            'content' => 'user/edit_form'
+        );
+        $this->load->view('menu/main', $data);
     }
 }
