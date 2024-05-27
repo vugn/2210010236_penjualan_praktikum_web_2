@@ -26,4 +26,9 @@ class User_Model extends CI_Model
         );
         return $this->db->insert($this->_table, $data);
     }
+
+    public function getById($id)
+    {
+        return $this->db->get_where($this->_table, ["id" => $id])->row();
+    }
 }
