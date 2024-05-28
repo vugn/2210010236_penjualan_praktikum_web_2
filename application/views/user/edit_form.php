@@ -13,6 +13,7 @@
             </div>
             <div class="mb-3">
                 <label for="username">USERNAME <code>*</code></label>
+                <input type="hidden" name="id" value="<?= $user->id ?>">
                 <input class="form-control <?php echo form_error('username') ? 'is-invalid' : '' ?>" type="text" name="username" value="<?= $user->username; ?>" placeholder="USERNAME" required />
                 <div class="invalid-feedback">
                     <?php echo form_error('username') ?>
@@ -42,7 +43,7 @@
             <div class="mb-3">
                 <label for="" class="form-label">Role <code>*</code></label>
                 <!-- <input name="role" class="form-select" list="selectOptions" id="role" placeholder="Tekan Untuk Memilih Role..." required> -->
-                <select name="role" class="form-select" required>
+                <select name="role" id="role" class="form-select" required>
                     <?php if ($user->role == "PEMILIK") { ?>
                         <option value="PEMILIK" selected>PEMILIK</option>
                         <option value="ADMIN">ADMIN</option>
