@@ -41,12 +41,22 @@
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Role <code>*</code></label>
-                <input name="role" class="form-control" list="datalistOptions" id="role" placeholder="Tekan Untuk Memilih Role..." required>
-                <datalist id="datalistOptions">
-                    <option value="Pemilik">
-                    <option value="Admin">
-                    <option value="Kasir">
-                </datalist>
+                <!-- <input name="role" class="form-select" list="selectOptions" id="role" placeholder="Tekan Untuk Memilih Role..." required> -->
+                <select name="role" class="form-select" required>
+                    <?php if ($user->role == "PEMILIK") { ?>
+                        <option value="PEMILIK" selected>PEMILIK</option>
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="KASIR">KASIR</option>
+                    <?php } else if ($user->role == "ADMIN") { ?>
+                        <option value="PEMILIK">PEMILIK</option>
+                        <option value="ADMIN" selected>ADMIN</option>
+                        <option value="KASIR">KASIR</option>
+                    <?php } else { ?>
+                        <option value="PEMILIK">PEMILIK</option>
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="KASIR" selected>KASIR</option>
+                    <?php } ?>
+                </select>
             </div>
             <div class="d-flex justify-content-end">
 

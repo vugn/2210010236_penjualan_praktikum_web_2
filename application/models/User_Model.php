@@ -47,4 +47,12 @@ class User_Model extends CI_Model
         );
         return $this->db->set($data)->where($this->primary, $id)->update($this->_table);
     }
+
+    public function delete($id)
+    {
+        $this->db->where('id', $id)->delete($this->_table);
+        if ($this->db->affected_rows() > 0) {
+            $this->session->set_flashdata("Success", "Data Berhasil Dihapus");
+        }
+    }
 }

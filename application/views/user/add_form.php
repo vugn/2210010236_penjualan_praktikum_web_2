@@ -37,12 +37,12 @@
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Role <code>*</code></label>
-                <input name="role" class="form-control" list="datalistOptions" id="role" placeholder="Tekan Untuk Memilih Role..." required>
-                <datalist id="datalistOptions">
-                    <option value="Pemilik">
-                    <option value="Admin">
-                    <option value="Kasir">
-                </datalist>
+                <!-- <input name="role" class="form-control" list="selectOptions" id="role" placeholder="Tekan Untuk Memilih Role..." required> -->
+                <select name="role" class="form-select" required>
+                    <option value="PEMILIK"> PEMILIK </option>
+                    <option value="ADMIN"> ADMIN </option>
+                    <option value="KASIR"> KASIR </option>
+                </select>
             </div>
             <div class="d-flex justify-content-end">
 
