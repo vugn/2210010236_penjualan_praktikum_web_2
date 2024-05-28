@@ -12,9 +12,13 @@
                 <input name="nik" type="text" class="form-control" value="<?= $user->nik ?>" id="" placeholder="NIK" required>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Username <code>*</code></label>
-                <input name="username" type="text" class="form-control" value="<?= $user->username ?>" id="" placeholder="Username" required>
+                <label for="username">USERNAME <code>*</code></label>
+                <input class="form-control <?php echo form_error('username') ? 'is-invalid' : '' ?>" type="text" name="username" value="<?= $user->username; ?>" placeholder="USERNAME" required />
+                <div class="invalid-feedback">
+                    <?php echo form_error('username') ?>
+                </div>
             </div>
+
             <div class="mb-3">
                 <label for="" class="form-label">Full Name <code>*</code></label>
                 <input name="full_name" type="text" class="form-control" value="<?= $user->full_name ?>" id="" placeholder="Full Name" required>
@@ -29,7 +33,7 @@
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Alamat <code>*</code></label>
-                <input name="alamat" type="text" class="form-control" value="<?= $user->address ?>" id="" placeholder="Alamat" required>
+                <input name="address" type="text" class="form-control" value="<?= $user->address ?>" id="" placeholder="Alamat" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Password <code>*</code></label>

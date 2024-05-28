@@ -29,7 +29,7 @@
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Alamat <code>*</code></label>
-                <input name="alamat" type="text" class="form-control" id="" placeholder="Alamat" required>
+                <input name="address" type="text" class="form-control" id="" placeholder="Alamat" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Password <code>*</code></label>

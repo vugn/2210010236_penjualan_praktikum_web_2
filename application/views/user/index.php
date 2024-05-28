@@ -40,8 +40,8 @@
                                      <td><?php echo $user->role; ?></td>
                                      <td>
                                          <div>
-                                             <a href="<?php echo base_url('user/getEdit/' . $user->id); ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i> Edit</a>
-                                             <a href="<?php echo base_url('user/delete/' . $user->id); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Ingin menghapus data user ini?');">
+                                             <a href="<?php echo base_url('user/getEdit/' . $user->id); ?>" class="btn btn-sm btn-info mb-1"><i class="fas fa-edit"></i> Edit</a>
+                                             <a href="<?php echo base_url('user/delete/' . $user->id); ?>" class="btn btn-sm btn-danger mb-1" onclick="return confirm('Ingin menghapus data user ini?');">
                                                  <i class="fas fa-trash"></i> Hapus
                                              </a>
                                          </div>
