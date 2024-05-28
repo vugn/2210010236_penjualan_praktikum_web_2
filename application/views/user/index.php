@@ -5,8 +5,8 @@
              <li class="breadcrumb-item"><a href="<?php echo site_url('admin/user') ?>">User</a></li>
              <li class="breadcrumb-item active "><?php echo $title; ?></li>
          </ol>
-         <div class="card mb-4">
-             <div class="card-header d-flex justify-content-end ">
+         <div class="card bg-secondary mb-4">
+             <div class="card-header bg-dark d-flex justify-content-end ">
                  <a class="btn btn-primary " href="<?php echo site_url('user/add') ?>"><i class="fas fa-plus"></i>Add New</a>
              </div>
              <?php if ($this->session->flashdata('success')) : ?>
@@ -15,16 +15,16 @@
                  </div>
              <?php endif; ?>
              <div class="card-body">
-                 <div class="table-responsive">
-                     <table class="table table-striped table-bordered table-hover" id="tabel-kelas" width="100%" cellspacing="0">
+                 <div class="table-responsive rounded">
+                     <table class="table rounded table-striped table-bordered table-dark" id="tabel-kelas" width="100%" cellspacing="0">
                          <thead>
                              <tr>
                                  <th>No</th>
-                                 <th>Name</th>
+                                 <th>Username</th>
                                  <th>Email</th>
                                  <th>Phone</th>
                                  <th>Role</th>
-                                 <th>Action</th>
+                                 <th class="d-flex justify-content-center">Action</th>
                              </tr>
                          </thead>
                          <tbody>
@@ -39,9 +39,9 @@
                                      <td><?php echo $user->phone; ?></td>
                                      <td><?php echo $user->role; ?></td>
                                      <td>
-                                         <div>
-                                             <a href="<?php echo base_url('user/getEdit/' . $user->id); ?>" class="btn btn-sm btn-info mb-1"><i class="fas fa-edit"></i> Edit</a>
-                                             <a href="<?php echo base_url('user/deleteUser/' . $user->id); ?>" class="btn btn-sm btn-danger mb-1" onclick="return confirm('Ingin menghapus data user ini?');">
+                                         <div class="d-flex justify-content-center">
+                                             <a href="<?php echo base_url('user/getEdit/' . $user->id); ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i> Edit</a>
+                                             <a href="<?php echo base_url('user/deleteUser/' . $user->id); ?>" class="btn btn-sm btn-danger ms-1" onclick="return confirm('Ingin menghapus data user ini?');">
                                                  <i class="fas fa-trash"></i> Hapus
                                              </a>
                                          </div>
