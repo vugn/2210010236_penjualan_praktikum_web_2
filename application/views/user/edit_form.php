@@ -9,31 +9,31 @@
         <form action="<?php echo site_url("user/edit") ?>" method="post">
             <div class="mb-3">
                 <label for="" class="form-label">NIK <code>*</code></label>
-                <input name="nik" type="text" class="form-control" id="" placeholder="NIK" required>
+                <input name="nik" type="text" class="form-control" value="<?= $user->nik ?>" id="" placeholder="NIK" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Username <code>*</code></label>
-                <input name="username" type="text" class="form-control" id="" placeholder="Username" required>
+                <input name="username" type="text" class="form-control" value="<?= $user->username ?>" id="" placeholder="Username" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Full Name <code>*</code></label>
-                <input name="full_name" type="text" class="form-control" id="" placeholder="Full Name" required>
+                <input name="full_name" type="text" class="form-control" value="<?= $user->full_name ?>" id="" placeholder="Full Name" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Phone <code>*</code></label>
-                <input name="phone" type="text" class="form-control" id="" placeholder="Phone" required>
+                <input name="phone" type="text" class="form-control" value="<?= $user->phone ?>" id="" placeholder="Phone" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Email <code>*</code></label>
-                <input name="email" type="email" class="form-control" id="" placeholder="Email" required>
+                <input name="email" type="email" class="form-control" value="<?= $user->email ?>" id="" placeholder="Email" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Alamat <code>*</code></label>
-                <input name="alamat" type="text" class="form-control" id="" placeholder="Alamat" required>
+                <input name="alamat" type="text" class="form-control" value="<?= $user->address ?>" id="" placeholder="Alamat" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Password <code>*</code></label>
-                <input name="password" type="password" class="form-control" id="" placeholder="Password" required>
+                <input name="password" type="password" class="form-control" value="<?= $user->password ?>" id="" placeholder="Password" required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Role <code>*</code></label>
